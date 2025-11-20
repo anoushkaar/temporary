@@ -1,0 +1,63 @@
+[
+  {
+    "id": "chat_001",
+    "chatInput": [
+      "I am writing a React component and I want to return multiple elements without wrapping them inside a parent div.",
+      "I have seen some people using empty tags in React. What is the correct way to do this?"
+    ],
+    "chatOutput": [
+      "You can return multiple elements using React Fragments. They allow you to group elements without adding extra nodes to the DOM.",
+      "Example: <></> wraps elements but does not create any actual HTML tag."
+    ]
+  },
+  {
+    "id": "chat_002",
+    "chatInput": [
+      "My Tailwind classes are not working inside my Vite project.",
+      "I installed Tailwind correctly and added classes like text-red-500, but nothing changes.",
+      "Is there any configuration I am missing?"
+    ],
+    "chatOutput": [
+      "This problem usually occurs when Tailwind cannot detect your file paths.",
+      "Make sure your tailwind.config.js has the correct content paths.",
+      "After editing the config file, restart your development server."
+    ]
+  },
+  {
+    "id": "chat_003",
+    "chatInput": [
+      "I am trying to fetch API data in React using useEffect.",
+      "The fetch function runs but I am not getting any output on the UI.",
+      "Can you explain the correct way to fetch data in React?"
+    ],
+    "chatOutput": [
+      "You must convert the response to JSON and store it inside a state variable.",
+      "React only re-renders when state updates, so saving the fetched data in state is important.",
+      "Always handle loading and error states for a better user experience."
+    ]
+  },
+  {
+    "id": "chat_004",
+    "chatInput": [
+      "I do not understand JavaScript closures properly.",
+      "Can you explain closures in a simple and clear way with an example?"
+    ],
+    "chatOutput": [
+      "A closure allows a function to remember variables from its outer scope even after the outer function has finished executing.",
+      "Closures are used in concepts like data privacy, currying, and function factories."
+    ]
+  },
+  {
+    "id": "chat_005",
+    "chatInput": [
+      "I want to create a custom scrollbar in React.",
+      "Tailwind does not provide scrollbar styling by default.",
+      "What is the best way to style scrollbars?"
+    ],
+    "chatOutput": [
+      "Use a custom CSS class for scrollbar styling.",
+      "Add the scrollbar styles in your global CSS file and then apply the class to the scrollable div.",
+      "This method works perfectly with both React and Tailwind."
+    ]
+  }
+]

@@ -1,5 +1,9 @@
-import { MoveUp, PanelLeft } from "lucide-react";
+import { CircleUser, LogOut, MoveUp, PanelLeft, Search, SquarePen } from "lucide-react";
 import { useState } from "react";
+import ChatHistory from "./components/ChatHistory";
+import ChatMessages from "./components/ChatMessages";
+import chatData from "./data/recentChat.json";
+import content from "./data/chatContent.json"
 
 const App = () => {
   const [isOpenSidebar, setIsOpenSidebar] = useState(true);
@@ -12,12 +16,41 @@ const App = () => {
       {/* left content */}
       <div
         className={`bg-[#181818] h-screen ${
-          isOpenSidebar ? "block w-[17%]" : "hidden"
+          isOpenSidebar ? "flex flex-col gap-8 w-[17%]" : "hidden"
         }`}
       >
-        <div className="flex flex-col gap-3 mt-12 items-start ml-3">
-          <button>New Chat</button>
-          <button>Seacrh Chat</button>
+        {/* upper div of left content */}
+        <div className="flex flex-col gap-4 mt-12 items-start h-[10%] p-2">
+          <div className="flex gap-2 items-center">
+            <SquarePen strokeWidth={1} size={18} />
+            <span>New Chat</span>
+          </div>
+          <div className="flex gap-2 items-center">
+            <Search strokeWidth={1} size={18} />
+            <span>Search Chat</span>
+          </div>
+        </div>
+        {/* mid div of left content */}
+        <div className=" h-[80%] overflow-y-scroll chatHistoryScrollArea">
+          <h3 className="p-2 text-gray-500 text-sm">Recent Chat</h3>
+          {chatData.map((data) => (
+            <ChatHistory chats={data} />
+          ))}
+        </div>
+        {/* bottom div of left content */}
+        <div className=" flex items-end h-[8%] p-2 border-t border-gray-600 justify-start">
+          <div className="flex w-[90%] h-[80%] items-center gap-2">
+            <CircleUser
+              strokeWidth={1}
+              size={30}
+              className="hover:text-gray-500 cursor-pointer"
+            />
+            <h2>Anoushka r</h2>
+          </div>
+          <LogOut
+            strokeWidth={1}
+            className="hover:text-red-600 cursor-pointer"
+          />
         </div>
       </div>
       {/* right content */}
@@ -39,10 +72,12 @@ const App = () => {
               />
             </div>
             {/* content area */}
-            <div className="flex justify-center items-center w-full">
-              <h1 className="font-extralight text-3xl">
-                What are you working on?
-              </h1>
+            <div className="flex justify-center w-full h-[90%]">
+              <div className="h-full p-1 w-full overflow-y-scroll flex flex-col chatHistoryScrollArea">
+                {content.map((data) => (
+                  <ChatMessages content={data} />
+                ))}
+              </div>
             </div>
           </div>
           {/* bottom div */}

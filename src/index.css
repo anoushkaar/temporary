@@ -32,3 +32,22 @@ textarea::-webkit-scrollbar-thumb {
 textarea::-webkit-scrollbar-thumb:hover {
   background-color: #777;
 }
+
+.chatHistoryScrollArea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chatHistoryScrollArea::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.chatHistoryScrollArea::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 8px;
+  border: 2px solid #2a2a2a;
+}
+
+.chatHistoryScrollArea::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
