@@ -59,5 +59,117 @@
       "Add the scrollbar styles in your global CSS file and then apply the class to the scrollable div.",
       "This method works perfectly with both React and Tailwind."
     ]
-  }
+  },
+
+    {
+      "id": "chat_006",
+      "chatInput": [
+        "Why do we use keys when rendering lists in React?",
+        "What happens if I don’t provide a key?"
+      ],
+      "chatOutput": [
+        "Keys help React identify which items changed, were added, or removed.",
+        "Without keys, React may re-render incorrectly and cause unstable UI behaviour."
+      ]
+    },
+    {
+      "id": "chat_007",
+      "chatInput": [
+        "I am getting the error: 'Cannot read property map of undefined'.",
+        "Why does this happen when using map in React?"
+      ],
+      "chatOutput": [
+        "This happens because you are trying to map over a variable that is undefined or null.",
+        "Make sure your state is initialized as an empty array or safely check data before mapping."
+      ]
+    },
+    {
+      "id": "chat_008",
+      "chatInput": [
+        "How do I pass data from a parent component to a child component?",
+        "Is props the only way?"
+      ],
+      "chatOutput": [
+        "The primary way is through props.",
+        "You can also use context for global data, but props are preferred for simple parent-to-child communication."
+      ]
+    },
+    {
+      "id": "chat_009",
+      "chatInput": [
+        "I want to center a div using TailwindCSS.",
+        "What classes should I use?"
+      ],
+      "chatOutput": [
+        "Use flex utilities: flex, items-center, justify-center.",
+        "Example: <div class=\"flex items-center justify-center\">Content</div>"
+      ]
+    },
+    {
+      "id": "chat_010",
+      "chatInput": [
+        "Why does React re-render my component even when props do not change?",
+        "How can I avoid unnecessary re-renders?"
+      ],
+      "chatOutput": [
+        "React re-renders because the parent component re-rendered or functions/objects were recreated.",
+        "Use React.memo, useCallback, or useMemo to optimize performance."
+      ]
+    },
+    {
+      "id": "chat_011",
+      "chatInput": [
+        "How do I create a modal in React using Tailwind?",
+        "Is there a built-in component for modals?"
+      ],
+      "chatOutput": [
+        "React does not have built-in modals. You must create one using conditional rendering.",
+        "You can use Tailwind classes like fixed, inset-0, bg-black/50 for backdrop and flex utilities to center it."
+      ]
+    },
+    {
+      "id": "chat_012",
+      "chatInput": [
+        "My useEffect is running multiple times during development.",
+        "Is this normal?"
+      ],
+      "chatOutput": [
+        "Yes. In React Strict Mode, React intentionally runs effects twice to detect issues.",
+        "This does not happen in production."
+      ]
+    },
+    {
+      "id": "chat_013",
+      "chatInput": [
+        "How do I conditionally apply Tailwind classes in React?",
+        "Is there an easy method?"
+      ],
+      "chatOutput": [
+        "You can use template literals or the clsx/classnames library.",
+        "Example: className={`${isActive ? 'text-blue-500' : 'text-gray-500'}`}"
+      ]
+    },
+    {
+      "id": "chat_014",
+      "chatInput": [
+        "How do I handle form inputs in React?",
+        "My input value is not updating."
+      ],
+      "chatOutput": [
+        "Use controlled components by binding value and onChange.",
+        "Example: <input value={name} onChange={(e) => setName(e.target.value)} />"
+      ]
+    },
+    {
+      "id": "chat_015",
+      "chatInput": [
+        "I want to animate a component in React.",
+        "Does Tailwind support animations?"
+      ],
+      "chatOutput": [
+        "Tailwind supports basic keyframe animations, but for more complex animations, use libraries like Framer Motion.",
+        "You can combine Tailwind utility classes with animation libraries easily."
+      ]
+    }
+  
 ]
